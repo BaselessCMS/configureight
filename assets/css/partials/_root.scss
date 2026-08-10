@@ -2,68 +2,50 @@
 /// Root variables
 ///
 
-@import '_utility';
-
-// Scheme colors.
-$color_body:  $white;
-$color_text:  $dark_gray;
-$color_one:   #0044aa;
-$color_two:   #0066cc;
-$color_three: $medium_gray;
-$color_four:  $light_gray;
-$color_five:  $dark_gray;
-$color_six:   $medium_gray;
-
-$color_body_dark:  $near_black;
-$color_text_dark:  $off_white;
-$color_one_dark:   $white;
-$color_two_dark:   $yellow;
-$color_three_dark: $dark_gray;
-$color_four_dark:  $medium_gray;
-$color_five_dark:  $medium_gray;
-$color_six_dark:   $light_gray;
+@use '../modules/colors';
+@use '../modules/typography';
 
 :root {
 
 	// Color schemes.
-	--cfe-scheme-color--body:  #{$color_body};
-	--cfe-scheme-color--text:  #{$color_text};
-	--cfe-scheme-color--one:   #{$color_one};
-	--cfe-scheme-color--two:   #{$color_two};
-	--cfe-scheme-color--three: #{$color_three};
-	--cfe-scheme-color--four:  #{$color_four};
-	--cfe-scheme-color--five:  #{$color_five};
-	--cfe-scheme-color--six:   #{$color_six};
+	--cfe-scheme-color--body:  #{colors.$color_body};
+	--cfe-scheme-color--text:  #{colors.$color_text};
+	--cfe-scheme-color--one:   #{colors.$color_one};
+	--cfe-scheme-color--two:   #{colors.$color_two};
+	--cfe-scheme-color--three: #{colors.$color_three};
+	--cfe-scheme-color--four:  #{colors.$color_four};
+	--cfe-scheme-color--five:  #{colors.$color_five};
+	--cfe-scheme-color--six:   #{colors.$color_six};
 
-	--cfe-scheme-color--body--dark:  #{$color_body_dark};
-	--cfe-scheme-color--text--dark:  #{$color_text_dark};
-	--cfe-scheme-color--one--dark:   #{$color_one_dark};
-	--cfe-scheme-color--two--dark:   #{$color_two_dark};
-	--cfe-scheme-color--three--dark: #{$color_three_dark};
-	--cfe-scheme-color--four--dark:  #{$color_four_dark};
-	--cfe-scheme-color--five--dark:  #{$color_five_dark};
-	--cfe-scheme-color--six--dark:   #{$color_six_dark};
+	--cfe-scheme-color--body--dark:  #{colors.$color_body_dark};
+	--cfe-scheme-color--text--dark:  #{colors.$color_text_dark};
+	--cfe-scheme-color--one--dark:   #{colors.$color_one_dark};
+	--cfe-scheme-color--two--dark:   #{colors.$color_two_dark};
+	--cfe-scheme-color--three--dark: #{colors.$color_three_dark};
+	--cfe-scheme-color--four--dark:  #{colors.$color_four_dark};
+	--cfe-scheme-color--five--dark:  #{colors.$color_five_dark};
+	--cfe-scheme-color--six--dark:   #{colors.$color_six_dark};
 
 	// General colors
-	--cfe-text-color--red: #{$red};
-	--cfe-text-color--orange: #{$orange};
-	--cfe-text-color--yellow: #{$yellow};
-	--cfe-text-color--green: #{$green};
-	--cfe-text-color--blue: #{$blue};
-	--cfe-text-color--violet: #{$violet};
+	--cfe-text-color--red: #{colors.$red};
+	--cfe-text-color--orange: #{colors.$orange};
+	--cfe-text-color--yellow: #{colors.$yellow};
+	--cfe-text-color--green: #{colors.$green};
+	--cfe-text-color--blue: #{colors.$blue};
+	--cfe-text-color--violet: #{colors.$violet};
 
-	--cfe-bg-color--red: #{$red};
-	--cfe-bg-color--orange: #{$orange};
-	--cfe-bg-color--yellow: #{$yellow};
-	--cfe-bg-color--green: #{$green};
-	--cfe-bg-color--blue: #{$blue};
-	--cfe-bg-color--violet: #{$violet};
+	--cfe-bg-color--red: #{colors.$red};
+	--cfe-bg-color--orange: #{colors.$orange};
+	--cfe-bg-color--yellow: #{colors.$yellow};
+	--cfe-bg-color--green: #{colors.$green};
+	--cfe-bg-color--blue: #{colors.$blue};
+	--cfe-bg-color--violet: #{colors.$violet};
 
 	// Font stacks.
-	--cfe-fonts--sans-stack: #{$fonts_sans};
-	--cfe-fonts--serif-stack: #{$fonts_serif};
-	--cfe-fonts--monospace-stack: #{$fonts_monospace};
-	--cfe-fonts--display-stack: #{$fonts_sans};
+	--cfe-fonts--sans-stack: #{typography.$fonts_sans};
+	--cfe-fonts--serif-stack: #{typography.$fonts_serif};
+	--cfe-fonts--monospace-stack: #{typography.$fonts_monospace};
+	--cfe-fonts--display-stack: #{typography.$fonts_sans};
 
 	// Layout general.
 	--cfe-spacing--horz: 2rem;
@@ -75,8 +57,8 @@ $color_six_dark:   $light_gray;
 	// Layout elements.
 	--cfe-box--border-style: solid;
 	--cfe-box--border-width: 1px;
-	--cfe-box--border-color: #{$light_gray};
-	--cfe-box--border-color--dark: #{$medium_gray};
+	--cfe-box--border-color: #{colors.$light_gray};
+	--cfe-box--border-color--dark: #{colors.$medium_gray};
 	--cfe-box--border: var( --cfe-box--border-style ) var( --cfe-box--border-width ) var( --cfe-box--border-color );
 	--cfe-box--border--dark: var( --cfe-box--border-style ) var( --cfe-box--border-width ) var( --cfe-box--border-color--dark );
 
@@ -129,8 +111,8 @@ $color_six_dark:   $light_gray;
 	--cfe-form-element--action--border-color--dark: var( --cfe-scheme-color--two--dark );
 	--cfe-form-element--border: var( --cfe-form-element--border-style ) var( --cfe-form-element--border-width ) var( --cfe-form-element--border-color );
 	--cfe-form-element--font-weight: 400;
-	--cfe-form--placeholder-color: #{$light_gray};
-	--cfe-form--placeholder-color--dark: #{$light_gray};
+	--cfe-form--placeholder-color: #{colors.$light_gray};
+	--cfe-form--placeholder-color--dark: #{colors.$light_gray};
 	--cfe-label-field--margin: 0;
 
 	--cfe-textarea--min-height: 200px;
@@ -148,10 +130,10 @@ $color_six_dark:   $light_gray;
 	--cfe-button--border-color--dark: var( --cfe-form-element--border-color--dark );
 	--cfe-button--action--border-color: var( --cfe-form-element--border-color );
 	--cfe-button--action--border-color--dark: var( --cfe-form-element--border-color--dark );
-	--cfe-button--text-color: #{$white};
-	--cfe-button--text-color--dark: #{$white};
-	--cfe-button--action--text-color: #{$white};
-	--cfe-button--action--text-color--dark: #{$white};
+	--cfe-button--text-color: #{colors.$white};
+	--cfe-button--text-color--dark: #{colors.$white};
+	--cfe-button--action--text-color: #{colors.$white};
+	--cfe-button--action--text-color--dark: #{colors.$white};
 	--cfe-button--svg-icon--width: 1em;
 	--cfe-button--svg-icon--height: 1em;
 
@@ -162,22 +144,22 @@ $color_six_dark:   $light_gray;
 	--cfe-toolbar--font-size: 0.875rem;
 	--cfe-toolbar--bg-color: var( --cfe-scheme-color--body--dark );
 	--cfe-toolbar--bg-color--dark: var( --cfe-scheme-color--body--dark );
-	--cfe-toolbar--text-color: #{$white};
-	--cfe-toolbar--text-color--dark: #{$white};
+	--cfe-toolbar--text-color: #{colors.$white};
+	--cfe-toolbar--text-color--dark: #{colors.$white};
 	--cfe-toolbar--link--padding: 0 0.5em;
 	--cfe-toolbar--link--mobile--padding: 0 0.75em;
 	--cfe-toolbar--link--bg-color: inherit;
 	--cfe-toolbar--link--bg-color--dark: inherit;
-	--cfe-toolbar--link--text-color: #{$white};
-	--cfe-toolbar--link--text-color--dark: #{$white};
+	--cfe-toolbar--link--text-color: #{colors.$white};
+	--cfe-toolbar--link--text-color--dark: #{colors.$white};
 	--cfe-toolbar--link--action--bg-color: var( --cfe-scheme-color--five );
 	--cfe-toolbar--link--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
-	--cfe-toolbar--link--action--text-color: #{$white};
-	--cfe-toolbar--link--action--text-color--dark: #{$white};
+	--cfe-toolbar--link--action--text-color: #{colors.$white};
+	--cfe-toolbar--link--action--text-color--dark: #{colors.$white};
 	--cfe-toolbar--submenu--link--action--bg-color: var( --cfe-scheme-color--six );
 	--cfe-toolbar--submenu--link--action--bg-color--dark: var( --cfe-scheme-color--six--dark );
-	--cfe-toolbar--submenu--link--text-color: #{$white};
-	--cfe-toolbar--submenu--link--text-color--dark: #{$white};
+	--cfe-toolbar--submenu--link--text-color: #{colors.$white};
+	--cfe-toolbar--submenu--link--text-color--dark: #{colors.$white};
 
 	// Header.
 	--cfe-site-header--bg-color: var( --cfe-body--bg-color );
@@ -194,10 +176,10 @@ $color_six_dark:   $light_gray;
 	--cfe-site-nav--sub-list--bg-color--dark: var( --cfe-scheme-color--five--dark );
 	--cfe-site-nav--sub-list--action--bg-color: var( --cfe-scheme-color--six );
 	--cfe-site-nav--sub-list--action--bg-color--dark: var( --cfe-scheme-color--six--dark );
-	--cfe-site-nav--sub-list--text-color: #{$white};
-	--cfe-site-nav--sub-list--text-color--dark: #{$white};
-	--cfe-site-nav--sub-list--action--text-color: #{$white};
-	--cfe-site-nav--sub-list--action--text-color--dark: #{$white};
+	--cfe-site-nav--sub-list--text-color: #{colors.$white};
+	--cfe-site-nav--sub-list--text-color--dark: #{colors.$white};
+	--cfe-site-nav--sub-list--action--text-color: #{colors.$white};
+	--cfe-site-nav--sub-list--action--text-color--dark: #{colors.$white};
 	--cfe-pagination-list--numeric--link--border: var( --cfe-form--border-style ) var( --cfe-form--border-width ) transparent;
 	--cfe-pagination-list--numeric--link--border--dark: var( --cfe-form--border-style ) var( --cfe-form--border-width ) transparent;
 	--cfe-pagination-list--numeric--link--active--border: var( --cfe-form--border-style ) var( --cfe-form--border-width ) var( --cfe-scheme-color--two );

@@ -1,0 +1,47 @@
+///
+/// SCSS color variables
+///
+
+// General colors.
+$white       : #ffffff !default;
+$off_white   : #e8e8e8 !default;
+$black       : #000000 !default;
+$near_black  : #1e1e1e !default;
+$dark_gray   : #333333 !default;
+$medium_gray : #555555 !default;
+$light_gray  : #888888 !default;
+$pale_gray   : #cccccc !default;
+$red         : #dd0000 !default;
+$orange      : #ee6600 !default;
+$yellow      : #ffdd00 !default;
+$green       : #00aa00 !default;
+$blue        : #0044aa !default;
+$violet      : #551188 !default;
+$error       : $red !default;
+$danger      : $red !default;
+$notify      : $orange !default;
+$warning     : $yellow !default;
+$success     : $green !default;
+
+// Color types.
+$body_color: $white !default;
+$text_color: $dark_gray !default;
+
+// Scheme colors.
+$color_body:  $white;
+$color_text:  $dark_gray;
+$color_one:   #0044aa;
+$color_two:   #0066cc;
+$color_three: $medium_gray;
+$color_four:  $light_gray;
+$color_five:  $dark_gray;
+$color_six:   $medium_gray;
+
+$color_body_dark:  $near_black;
+$color_text_dark:  $off_white;
+$color_one_dark:   $white;
+$color_two_dark:   $yellow;
+$color_three_dark: $dark_gray;
+$color_four_dark:  $medium_gray;
+$color_five_dark:  $medium_gray;
+$color_six_dark:   $light_gray;

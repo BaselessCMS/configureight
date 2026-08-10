@@ -486,10 +486,10 @@
 	position: relative;
 	margin: 0;
 	overflow: hidden;
-	color: $white;
+	color: #ffffff;
 
 	h2, h3, h4, a {
-		color: $white;
+		color: #ffffff;
 	}
 
 	.post-header {
@@ -518,7 +518,7 @@
 			line-height: var( --cfe-post-header--grid--heading--line-height, clamp( 1.2em, 1.5vw, 1.4em ) );
 			letter-spacing: var( --cfe-post-header--grid--heading--letter-spacing );
 			text-align: center;
-			color: $white;
+			color: #ffffff;
 		}
 	}
 

@@ -2,6 +2,9 @@
 /// General styles
 ///
 
+@use '../modules/colors';
+@use '../modules/keyframes';
+
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
@@ -307,19 +310,19 @@ h6 {
 }
 
 .text-success {
-	color: var( --cfe-text-color--green, $success );
+	color: var( --cfe-text-color--green, colors.$success );
 }
 
 .text-info {
-	color: var( --cfe-text-color--blue, $blue );
+	color: var( --cfe-text-color--blue, colors.$blue );
 }
 
 .text-warning {
-	color: var( --cfe-text-color--orange, $notify );
+	color: var( --cfe-text-color--orange, colors.$notify );
 }
 
 .text-danger {
-	color: var( --cfe-text-color--red, $danger );
+	color: var( --cfe-text-color--red, colors.$danger );
 }
 
 // Used for `ul` and `ol` elements.
@@ -513,36 +516,36 @@ code.select {
 
 // Text selection.
 ::-o-selection {
-	color: var( --cfe-selection--text-color, $near_black );
-	background: var( --cfe-selection--bg-color, $yellow );
+	color: var( --cfe-selection--text-color, colors.$near_black );
+	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
 	@media ( prefers-color-scheme: dark ) {}
 }
 ::-ms-selection {
-	color: var( --cfe-selection--text-color, $near_black );
-	background: var( --cfe-selection--bg-color, $yellow );
+	color: var( --cfe-selection--text-color, colors.$near_black );
+	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
 	@media ( prefers-color-scheme: dark ) {}
 }
 ::-webkit-selection {
-	color: var( --cfe-selection--text-color, $near_black );
-	background: var( --cfe-selection--bg-color, $yellow );
+	color: var( --cfe-selection--text-color, colors.$near_black );
+	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
 	@media ( prefers-color-scheme: dark ) {}
 }
 ::-moz-selection {
-	color: var( --cfe-selection--text-color, $near_black );
-	background: var( --cfe-selection--bg-color, $yellow );
+	color: var( --cfe-selection--text-color, colors.$near_black );
+	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
 	@media ( prefers-color-scheme: dark ) {}
 }
 ::selection {
-	color: var( --cfe-selection--text-color, $near_black );
-	background: var( --cfe-selection--bg-color, $yellow );
+	color: var( --cfe-selection--text-color, colors.$near_black );
+	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
 	@media ( prefers-color-scheme: dark ) {}
@@ -559,7 +562,7 @@ code.select {
 .tooltipster-sidetip.cfe-tooltips .tooltipster-content,
 .tooltipster-follower.cfe-tooltips .tooltipster-content {
 	background-color: var( --cfe-tooltip--bg-color, var( --cfe-body--bg-color--dark, #333333 ) );
-	color: $white;
+	color: #ffffff;
 	border-radius: 0px;
 	padding: 0.5em 0.625em;
 	line-height: 1;

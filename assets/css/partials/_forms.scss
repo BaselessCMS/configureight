@@ -2,6 +2,8 @@
 /// Form styles
 ///
 
+@use '../modules/icons';
+
 form {
 	position: var( --cfe-form--position, static );
 	display: var( --cfe-form--display, block );
@@ -349,11 +351,11 @@ h3 + .search-form {
 			background-repeat: var( --cfe-search--button--background-repeat, no-repeat );
 			background-size: var( --cfe-search--button--background-size, 1.25em );
 			background-position: var( --cfe-search--button--background-position, center center );
-			background-image: var( --cfe-search--button--background-image, url( '#{$search_icon_bg}' ) );
+			background-image: var( --cfe-search--button--background-image, url( '#{icons.$search_icon_bg}' ) );
 
 			&:hover,
 			&:focus {
-				background-image: var( --cfe-search--button--action--background-image, url( '#{$search_icon_action_bg}' ) );
+				background-image: var( --cfe-search--button--action--background-image, url( '#{icons.$search_icon_action_bg}' ) );
 			}
 		}
 	}

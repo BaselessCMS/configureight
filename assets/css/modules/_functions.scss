@@ -1,0 +1,14 @@
+///
+/// SCSS functions
+///
+
+@use 'sass:string';
+@use 'colors';
+
+// SVG icon colors.
+@function svg_icon_color() {
+	@return '%23' + string.slice( '#{colors.$white}', 2, -1 );
+}
+@function svg_icon_action_color() {
+	@return '%23' + string.slice( '#{colors.$white}', 2, -1 );
+}
