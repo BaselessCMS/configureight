@@ -7,14 +7,14 @@
 	width: var( --cfe-content-wrapper--width, 100% );
 	max-width: var( --cfe-content-wrapper--max-width, 100% );
 	height: var( --cfe-content-wrapper--height );
-	margin: var( --cfe-content-wrapper--margin, var( --cfe-spacing--vert, 2rem ) auto );
-	padding: var( --cfe-content-wrapper--padding, 0 var( --cfe-spacing--horz, 2rem ) );
+	margin: var( --cfe-content-wrapper--margin, var( --cfe-spacing--y, 2rem ) auto );
+	padding: var( --cfe-content-wrapper--padding, 0 var( --cfe-spacing--x, 2rem ) );
 	display: var( --cfe-content-wrapper--display, flex );
 	flex-direction: var( --cfe-content-wrapper--flex-direction, row );
 	flex-wrap: var( --cfe-content-wrapper--flex-wrap, nowrap );
 	align-items: var( --cfe-content-wrapper--align-items );
 	justify-content: var( --cfe-content-wrapper--justify-content );
-	gap: var( --cfe-content-wrapper--gap, var( --cfe-spacing--vert, 2rem ) var( --cfe-spacing--horz, 2rem ) );
+	gap: var( --cfe-content-wrapper--gap, var( --cfe-spacing--y, 2rem ) var( --cfe-spacing--x, 2rem ) );
 
 	@container page-wrap ( max-width: 960px ) {
 		flex-direction: column;
@@ -122,10 +122,10 @@
 
 .loop {
 	article {
-		margin: var( --cfe-loop--article--margin, var( --cfe-spacing--vert, 2rem ) 0 0 0 );
+		margin: var( --cfe-loop--article--margin, var( --cfe-spacing--y, 2rem ) 0 0 0 );
 
 		&:not( :first-of-type ) {
-			padding: var( --cfe-loop--article--padding, var( --cfe-spacing--vert, 2rem ) 0 0 0 );
+			padding: var( --cfe-loop--article--padding, var( --cfe-spacing--y, 2rem ) 0 0 0 );
 			border-top: var( --cfe-loop--article--border-top, var( --cfe-box--border ) );
 
 			@media ( prefers-color-scheme: dark ) {
@@ -192,7 +192,7 @@
 
 .loop-wrap {
 	&.loop-wrap-grid {
-		margin: var( --cfe-spacing--horz, 2rem ) 0 0 0;
+		margin: var( --cfe-spacing--x, 2rem ) 0 0 0;
 		display: grid;
 		grid-template-columns: repeat( 3, 1fr );
 		gap: 0.25rem;
@@ -624,7 +624,7 @@
 }
 
 .page-content {
-	margin: var( --cfe-page-content--margin, var( --cfe-spacing--vert ) 0 0 0 );
+	margin: var( --cfe-page-content--margin, var( --cfe-spacing--y ) 0 0 0 );
 
 	ul {
 		list-style: var( --cfe-ul--list-style, none );
@@ -1031,12 +1031,12 @@
 
 // Page gallery.
 div.page-gallery {
-	padding: var( --cfe-spacing--vert, 2rem ) 0 0 0;
+	padding: var( --cfe-spacing--y, 2rem ) 0 0 0;
 	border-top: var( --cfe-box--border );
 }
 
 .page-gallery {
-	margin: var( --cfe-spacing--vert, 2rem ) 0 0 0;
+	margin: var( --cfe-spacing--y, 2rem ) 0 0 0;
 
 	@media ( prefers-color-scheme: dark ) {
 		border-top: var( --cfe-box--border--dark );
@@ -1101,7 +1101,7 @@ div.page-gallery {
 	}
 
 	ul {
-		margin: var( --cfe-element--margin, calc( var( --cfe-spacing--vert ) / 2 ) 0 0 0 );
+		margin: var( --cfe-element--margin, calc( var( --cfe-spacing--y ) / 2 ) 0 0 0 );
 		grid-template-columns: repeat( 3, 1fr );
 
 		@container page-wrap ( max-width: 640px ) {
@@ -1151,6 +1151,6 @@ div.page-gallery {
 
 // Page gallery.
 .author-box {
-	margin: var( --cfe-spacing--vert, 2rem ) 0 0 0;
+	margin: var( --cfe-spacing--y, 2rem ) 0 0 0;
 	border-top: var( --cfe-box--border );
 }

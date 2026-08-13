@@ -50,7 +50,12 @@
 	@return currentColor;
 }
 
-// Use as background-image: namespace.search_icon_bg( $color );
+///
+/// Use as background-image
+///
+/// @example namespace.search_icon_bg( $color );
+/// If using a hex value rather than a variable
+/// then do not quote the `#abc123` string.
 @function search_icon_bg( $color ) {
 
 	@if meta.type-of( $color ) == 'color' {

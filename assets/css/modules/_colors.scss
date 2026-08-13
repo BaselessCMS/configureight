@@ -16,32 +16,81 @@ $orange      : #ee6600 !default;
 $yellow      : #ffdd00 !default;
 $green       : #00aa00 !default;
 $blue        : #0044aa !default;
+$purple      : #bb00aa !default;
 $violet      : #551188 !default;
-$error       : $red !default;
-$danger      : $red !default;
+$error       : $red    !default;
+$danger      : $red    !default;
 $notify      : $orange !default;
 $warning     : $yellow !default;
-$success     : $green !default;
+$success     : $green  !default;
 
 // Color types.
 $body_color: $white !default;
 $text_color: $dark_gray !default;
+$body_color_dark: $near_black !default;
+$text_color_dark: $off_white !default;
+
+$colors: (
+	'white'       : $white,
+	'off-white'   : $off_white,
+	'black'       : $black,
+	'near-black'  : $near_black,
+	'dark-gray'   : $dark_gray,
+	'medium-gray' : $medium_gray,
+	'light-gray'  : $light_gray,
+	'pale-gray'   : $pale_gray,
+	'red'         : $red,
+	'orange'      : $orange,
+	'yellow'      : $yellow,
+	'green'       : $green,
+	'blue'        : $blue,
+	'purple'      : $purple,
+	'violet'      : $violet,
+	'error'       : $error,
+	'danger'      : $danger,
+	'notify'      : $notify,
+	'warning'     : $warning,
+	'success'     : $success
+) !default;
 
 // Scheme colors.
-$color_body:  $white;
-$color_text:  $dark_gray;
-$color_one:   $blue;
-$color_two:   #0066cc;
-$color_three: $medium_gray;
-$color_four:  $light_gray;
-$color_five:  $dark_gray;
-$color_six:   $medium_gray;
+$color_body:  $body_color !default;
+$color_text:  $text_color !default;
+$color_one:   $blue !default;
+$color_two:   $violet !default;
+$color_three: $medium_gray !default;
+$color_four:  $light_gray !default;
+$color_five:  $dark_gray !default;
+$color_six:   $medium_gray !default;
 
-$color_body_dark:  $near_black;
-$color_text_dark:  $off_white;
-$color_one_dark:   $white;
-$color_two_dark:   $yellow;
-$color_three_dark: $dark_gray;
-$color_four_dark:  $medium_gray;
-$color_five_dark:  $medium_gray;
-$color_six_dark:   $light_gray;
+$color_body_dark:  $body_color_dark !default;
+$color_text_dark:  $text_color_dark !default;
+$color_one_dark:   $white !default;
+$color_two_dark:   $yellow !default;
+$color_three_dark: $dark_gray !default;
+$color_four_dark:  $medium_gray !default;
+$color_five_dark:  $dark_gray !default;
+$color_six_dark:   $medium_gray !default;
+
+$schemes: (
+	'light' : (
+		'body'  : $color_body,
+		'text'  : $color_text,
+		'one'   : $color_one,
+		'two'   : $color_two,
+		'three' : $color_three,
+		'four'  : $color_four,
+		'five'  : $color_five,
+		'six'   : $color_six
+	),
+	'dark' : (
+		'body'  : $color_body_dark,
+		'text'  : $color_text_dark,
+		'one'   : $color_one_dark,
+		'two'   : $color_two_dark,
+		'three' : $color_three_dark,
+		'four'  : $color_four_dark,
+		'five'  : $color_five_dark,
+		'six'   : $color_six_dark
+	)
+) !default;

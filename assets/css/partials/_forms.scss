@@ -351,7 +351,7 @@ h3 + .search-form {
 			background-repeat: var( --cfe-search--button--background-repeat, no-repeat );
 			background-size: var( --cfe-search--button--background-size, 1.25em );
 			background-position: var( --cfe-search--button--background-position, center center );
-			background-image: f.search_icon_bg( '#ffffff' );
+			background-image: var( --cfe-search-button--background-image, f.search_icon_bg( #ffffff ) );
 		}
 	}
 }

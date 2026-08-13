@@ -1,0 +1,32 @@
+///
+/// Layout SCSS variables
+///
+
+// Spacing variables.
+$spacing_x: 2rem;
+$spacing_y: 2rem;
+
+// Media queries.
+$break_min_xs : 0px !default;
+$break_min_sm : 576px  !default;
+$break_min_md : 768px  !default;
+$break_min_lg : 992px  !default;
+$break_min_xl : 1200px !default;
+$break_max_xs : 480px  !default;
+$break_max_sm : 575.98px  !default;
+$break_max_md : 767.98px  !default;
+$break_max_lg : 991.98px  !default;
+$break_max_xl : 1199.98px !default;
+
+$break: (
+	'min-xs' : $break_min_xs,
+	'min-sm' : $break_min_sm,
+	'min-md' : $break_min_md,
+	'min-lg' : $break_min_lg,
+	'min-xl' : $break_min_xl,
+	'max-xs' : $break_max_xs,
+	'max-sm' : $break_max_sm,
+	'max-md' : $break_max_md,
+	'max-lg' : $break_max_lg,
+	'max-xl' : $break_max_xl
+) !default;

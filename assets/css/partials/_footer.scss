@@ -10,7 +10,7 @@
 	max-height: var( --cfe-site-footer-text--max-height );
 	min-height: var( --cfe-site-footer-text--min-height );
 	margin: var( --cfe-site-footer--margin, 0 );
-	padding: var( --cfe-site-footer--padding, var( --cfe-spacing--vert, 2rem ) var( --cfe-spacing--horz, 2rem ) );
+	padding: var( --cfe-site-footer--padding, var( --cfe-spacing--y, 2rem ) var( --cfe-spacing--x, 2rem ) );
 	font-family: var( --cfe-site-footer--font-family, inherit );
 	font-size: var( --cfe-site-footer--font-size, inherit );
 	font-weight: var( --cfe-site-footer--font-weight, inherit );
@@ -89,7 +89,7 @@
 	.search-form-wrap {
 		width: 100%;
 		max-width: var( --cfe-form-element--max-width, 640px );
-		margin: calc( var( --cfe-spacing--vert ) / 2 ) auto;
+		margin: calc( var( --cfe-spacing--y ) / 2 ) auto;
 
 		.search-form {
 			margin: 0;

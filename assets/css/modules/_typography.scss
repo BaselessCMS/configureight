@@ -3,11 +3,18 @@
 ///
 
 // Font stacks.
-$fonts_sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$fonts_sans: -apple-system, BlinkMacSystemFont, '"Segoe UI"', '"Roboto"', '"Oxygen-Sans"', '"Ubuntu"', '"Cantarell"', '"Helvetica Neue"', sans-serif, '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"' !default;
 
-$fonts_serif: NonBreakingSpaceOverride, 'Hoefler Text', 'Baskerville Old Face', Garamond, Times, 'Times New Roman', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$fonts_serif: NonBreakingSpaceOverride, '"Hoefler Text"', '"Baskerville Old Face"', '"Garamond"', '"Times"', '"Times New Roman"', serif, '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"' !default;
 
-$fonts_monospace: 'Source Code Pro', 'Roboto Mono', 'Fira Code', 'Liberation Mono', Inconsolata, Menlo, Monaco, Consolas, 'Cascadia Mono', 'Segoe UI Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Fira Mono', 'Droid Sans Mono', 'Courier New', Courier, ui-monospace, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$fonts_monospace: '"Source Code Pro"', '"Roboto Mono"', '"Fira Code"', '"Liberation Mono"', '"Inconsolata"', '"Menlo"', '"Monaco"', '"Consolas"', '"Cascadia Mono"', '"Segoe UI Mono"', '"Oxygen Mono"', '"Ubuntu Monospace"', '"Fira Mono"', '"Droid Sans Mono"', '"Courier New"', '"Courier"', ui-monospace, monospace, '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"' !default;
+
+$stacks: (
+	'sans'    : $fonts_sans,
+	'serif'   : $fonts_serif,
+	'mono'    : $fonts_monospace,
+	'display' : $fonts_sans
+) !default;
 
 ///
 /// Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
