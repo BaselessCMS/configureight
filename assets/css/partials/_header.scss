@@ -3,7 +3,7 @@
 ///
 
 @use '../modules/colors';
-@use '../modules/icons';
+@use '../modules/functions' as f;
 @use '../modules/keyframes';
 
 .site-header {
@@ -57,7 +57,7 @@
 		width: 1.5em;
 		height: 1.5em;
 		padding: 1.5em;
-		background-image: url( '#{icons.$close_icon_bg}' );
+		background-image: f.close_icon_bg( '#ffffff' );
 
 		@media ( prefers-color-scheme: dark ) {
 			background-color: var( --cfe-button--bg-color--dark );
@@ -65,7 +65,7 @@
 
 		&:hover,
 		&:focus {
-			background-image: url( '#{icons.$close_icon_action_bg}' );
+			background-image: f.close_icon_bg( '#ffffff' );
 			background-color: var( --cfe-button--action--bg-color, var( --cfe-button--bg-color ) );
 			border-color: var( --cfe-button--action-border-color, var( --cfe-button--border-color ) );
 			color: var( --cfe-button--action--text-color, var(--cfe-button--text-color ) );
@@ -121,12 +121,7 @@
 				width: 1.5em;
 				height: 1.5em;
 				padding: 1.5em;
-				background-image: url( '#{icons.$search_icon_bg}' );
-
-				&:hover,
-				&:focus {
-					background-image: url( '#{icons.$search_icon_action_bg}' );
-				}
+				background-image: f.search_icon_bg( '#ffffff' );
 			}
 		}
 	}
