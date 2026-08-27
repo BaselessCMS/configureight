@@ -352,6 +352,11 @@ h3 + .search-form {
 			background-size: var( --cfe-search--button--background-size, 1.25em );
 			background-position: var( --cfe-search--button--background-position, center center );
 			background-image: var( --cfe-search-button--background-image, f.search_icon_bg( #ffffff ) );
+
+			&:hover,
+			&:focus {
+				background-image: var( --cfe-search-button--action--background-image, f.search_icon_bg( #ffffff ) );
+			}
 		}
 	}
 }
