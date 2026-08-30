@@ -626,6 +626,13 @@ function body_classes() {
 		}
 	}
 
+	// Dark mode.
+	if ( plugin() ) {
+		if ( plugin()->use_dark_scheme() ) {
+			$classes[] = 'dark-mode';
+		}
+	}
+
 	/**
 	 * Color scheme
 	 *
