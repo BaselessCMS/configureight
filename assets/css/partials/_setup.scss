@@ -520,35 +520,72 @@ code.select {
 	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
-	@media ( prefers-color-scheme: dark ) {}
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
 }
 ::-ms-selection {
 	color: var( --cfe-selection--text-color, colors.$near_black );
 	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
-	@media ( prefers-color-scheme: dark ) {}
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
 }
 ::-webkit-selection {
 	color: var( --cfe-selection--text-color, colors.$near_black );
 	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
-	@media ( prefers-color-scheme: dark ) {}
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
 }
 ::-moz-selection {
 	color: var( --cfe-selection--text-color, colors.$near_black );
 	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
-	@media ( prefers-color-scheme: dark ) {}
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
 }
 ::selection {
 	color: var( --cfe-selection--text-color, colors.$near_black );
 	background: var( --cfe-selection--bg-color, colors.$yellow );
 	text-shadow: none;
 
-	@media ( prefers-color-scheme: dark ) {}
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
+}
+.dak-mode {
+	::-o-selection {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
+	::-ms-selection {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
+	::-webkit-selection {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
+	::-moz-selection {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
+	::selection {
+		color: var( --cfe-selection--text-color--dark, colors.$near_black );
+		background: var( --cfe-selection--bg-color--dark, colors.$yellow );
+	}
 }
 
 // Tooltips
