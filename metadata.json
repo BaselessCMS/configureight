@@ -1,11 +1,11 @@
 {
 	"author"      : "Bludiot",
 	"email"       : "",
-	"website"     : "https://github.com/Bludiot/configureight",
+	"website"     : "https://baselesscms.github.io/pages/",
 	"version"     : "1.0.0",
 	"releaseDate" : "",
 	"license"     : "Nope",
-	"compatible"  : "3.16.2",
+	"compatible"  : "3.22.0",
 	"notes"       : "A theme for Bludit CMS with many configurable options.",
 	"plugin"      : "configureight",
 	"admin_theme" : "configureight",
