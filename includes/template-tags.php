@@ -197,11 +197,11 @@ function config_styles() {
 		plugin()->content_width()
 	);
 	$styles .= sprintf(
-		'--cfe-spacing--horz: %srem;',
+		'--cfe-spacing--x: %srem;',
 		plugin()->horz_spacing()
 	);
 	$styles .= sprintf(
-		'--cfe-spacing--vert: %srem;',
+		'--cfe-spacing--y: %srem;',
 		plugin()->vert_spacing()
 	);
 
