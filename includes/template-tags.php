@@ -753,6 +753,8 @@ function body_classes() {
 				) {
 					$classes[] = 'template-no-sidebar';
 				}
+			} elseif ( str_contains( page()->template(), 'sidebar-bottom' ) ) {
+				$classes[] = 'template-sidebar-bottom';
 			} else {
 				$classes[] = 'template-sidebar';
 			}
