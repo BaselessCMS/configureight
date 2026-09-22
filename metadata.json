@@ -13,5 +13,5 @@
 	"breadcrumbs"  : true,
 	"comments"     : true,
 	"profiles"     : true,
-	"admin_footer" : "<p>Configure 8 theme & admin theme by <a href='https://github.com/BaselessCMS' target='_blank' rel='noopener noreferrer'>Baseless</a>.</p>"
+	"admin_footer" : "<p><small>Configure 8 theme & admin theme by <a href='https://github.com/BaselessCMS' target='_blank' rel='noopener noreferrer'>Baseless</a>.</small></p>"
 }
