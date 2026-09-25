@@ -2,6 +2,7 @@
 /// Root variables
 ///
 
+@use 'sass:map';
 @use '../modules/colors' as c;
 @use '../modules/layout' as l;
 @use '../modules/typography' as t;
@@ -10,14 +11,15 @@
 :root {
 
 	// General colors.
+	@each $name, $color in c.$grayscale {
+		--cfe-color--#{$name}: #{$color};
+	}
 	@each $name, $color in c.$colors {
 		--cfe-color--#{$name}: #{$color};
-		--cfe-bg-color--#{$name}: #{$color};
-		--cfe-text-color--#{$name}: #{$color};
 	}
 
-	// Color schemes.
-	@each $scheme, $colors in c.$schemes {
+	// Color scheme.
+	@each $scheme, $colors in c.$scheme {
 		@if $scheme == 'light' {
 			@each $name, $value in $colors {
 				--cfe-scheme-color--#{$name}: #{$value};
@@ -29,6 +31,7 @@
 			}
 		}
 	}
+	--cfe-cover-blend--bg-color: #{map.get( c.$scheme, 'media' )};
 
 	// Font stacks.
 	@each $stack, $fonts in t.$stacks {
@@ -56,8 +59,8 @@
 	// Layout elements.
 	--cfe-box--border-style: solid;
 	--cfe-box--border-width: 1px;
-	--cfe-box--border-color: #{c.$light_gray};
-	--cfe-box--border-color--dark: #{c.$medium_gray};
+	--cfe-box--border-color: #{map.get( c.$grayscale, '300' )};
+	--cfe-box--border-color--dark: #{map.get( c.$grayscale, '700' )};
 	--cfe-box--border: var( --cfe-box--border-style ) var( --cfe-box--border-width ) var( --cfe-box--border-color );
 	--cfe-box--border--dark: var( --cfe-box--border-style ) var( --cfe-box--border-width ) var( --cfe-box--border-color--dark );
 
@@ -115,8 +118,8 @@
 	--cfe-form-element--action--border-color--dark: var( --cfe-scheme-color--two--dark );
 	--cfe-form-element--border: var( --cfe-form-element--border-style ) var( --cfe-form-element--border-width ) var( --cfe-form-element--border-color );
 	--cfe-form-element--font-weight: 400;
-	--cfe-form--placeholder-color: #{c.$light_gray};
-	--cfe-form--placeholder-color--dark: #{c.$light_gray};
+	--cfe-form--placeholder-color: #{map.get( c.$grayscale, '500' )};
+	--cfe-form--placeholder-color--dark: #{map.get( c.$grayscale, '500' )};
 	--cfe-label-field--margin: 0;
 
 	--cfe-textarea--min-height: 200px;
@@ -134,10 +137,10 @@
 	--cfe-button--border-color--dark: var( --cfe-form-element--border-color--dark );
 	--cfe-button--action--border-color: var( --cfe-form-element--border-color );
 	--cfe-button--action--border-color--dark: var( --cfe-form-element--border-color--dark );
-	--cfe-button--text-color: #{c.$white};
-	--cfe-button--text-color--dark: #{c.$white};
-	--cfe-button--action--text-color: #{c.$white};
-	--cfe-button--action--text-color--dark: #{c.$white};
+	--cfe-button--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-button--text-color--dark: #{map.get( c.$grayscale, 'white' )};
+	--cfe-button--action--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-button--action--text-color--dark: #{map.get( c.$grayscale, 'white' )};
 	--cfe-button--svg-icon--width: 1em;
 	--cfe-button--svg-icon--height: 1em;
 
@@ -148,22 +151,22 @@
 	--cfe-toolbar--font-size: 0.875rem;
 	--cfe-toolbar--bg-color: var( --cfe-scheme-color--body--dark );
 	--cfe-toolbar--bg-color--dark: var( --cfe-scheme-color--body--dark );
-	--cfe-toolbar--text-color: #{c.$white};
-	--cfe-toolbar--text-color--dark: #{c.$white};
+	--cfe-toolbar--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-toolbar--text-color--dark: #{map.get( c.$grayscale, 'white' )};
 	--cfe-toolbar--link--padding: 0 0.5em;
 	--cfe-toolbar--link--mobile--padding: 0 0.75em;
 	--cfe-toolbar--link--bg-color: inherit;
 	--cfe-toolbar--link--bg-color--dark: inherit;
-	--cfe-toolbar--link--text-color: #{c.$white};
-	--cfe-toolbar--link--text-color--dark: #{c.$white};
+	--cfe-toolbar--link--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-toolbar--link--text-color--dark: #{map.get( c.$grayscale, 'white' )};
 	--cfe-toolbar--link--action--bg-color: var( --cfe-scheme-color--five );
 	--cfe-toolbar--link--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
-	--cfe-toolbar--link--action--text-color: #{c.$white};
-	--cfe-toolbar--link--action--text-color--dark: #{c.$white};
+	--cfe-toolbar--link--action--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-toolbar--link--action--text-color--dark: #{map.get( c.$grayscale, 'white' )};
 	--cfe-toolbar--submenu--link--action--bg-color: var( --cfe-scheme-color--six );
 	--cfe-toolbar--submenu--link--action--bg-color--dark: var( --cfe-scheme-color--six--dark );
-	--cfe-toolbar--submenu--link--text-color: #{c.$white};
-	--cfe-toolbar--submenu--link--text-color--dark: #{c.$white};
+	--cfe-toolbar--submenu--link--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-toolbar--submenu--link--text-color--dark: #{map.get( c.$grayscale, 'white' )};
 
 	// Header.
 	--cfe-site-header--bg-color: var( --cfe-body--bg-color );
@@ -171,7 +174,6 @@
 	--cfe-site-logo--min-width: 80px;
 	--cfe-cover--description--font-size: 1.3125rem;
 	--cfe-cover-overlay--bg-color: #{rgba( $color: black, $alpha: 0.625 )};
-	--cfe-cover-blend--bg-color: #3e6caf;
 
 	// Navigation.
 	--cfe-site-nav--max-width: 50vw;
@@ -180,10 +182,10 @@
 	--cfe-site-nav--sub-list--bg-color--dark: var( --cfe-scheme-color--five--dark );
 	--cfe-site-nav--sub-list--action--bg-color: var( --cfe-scheme-color--six );
 	--cfe-site-nav--sub-list--action--bg-color--dark: var( --cfe-scheme-color--six--dark );
-	--cfe-site-nav--sub-list--text-color: #{c.$white};
-	--cfe-site-nav--sub-list--text-color--dark: #{c.$white};
-	--cfe-site-nav--sub-list--action--text-color: #{c.$white};
-	--cfe-site-nav--sub-list--action--text-color--dark: #{c.$white};
+	--cfe-site-nav--sub-list--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-site-nav--sub-list--text-color--dark: #{map.get( c.$grayscale, 'white' )};
+	--cfe-site-nav--sub-list--action--text-color: #{map.get( c.$grayscale, 'white' )};
+	--cfe-site-nav--sub-list--action--text-color--dark: #{map.get( c.$grayscale, 'white' )};
 	--cfe-pagination-list--numeric--link--border: var( --cfe-form--border-style ) var( --cfe-form--border-width ) transparent;
 	--cfe-pagination-list--numeric--link--border--dark: var( --cfe-form--border-style ) var( --cfe-form--border-width ) transparent;
 	--cfe-pagination-list--numeric--link--active--border: var( --cfe-form--border-style ) var( --cfe-form--border-width ) var( --cfe-scheme-color--two );
