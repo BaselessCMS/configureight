@@ -152,7 +152,7 @@ function config_styles() {
 	}
 
 	$nav_pos = get_nav_position();
-	$styles  = '<style>:root {';
+	$styles  = '<style>:host, :root {';
 
 	// Loader image overlay.
 	if ( plugin()->use_dark_scheme() ) {

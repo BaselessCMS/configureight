@@ -101,8 +101,8 @@ if ( plugin() ) {
 
 	// Configuration styles.
 	if ( plugin() ) {
-		echo plugin()->scheme_stylesheet( 'colors' );
 		echo plugin()->scheme_stylesheet( 'fonts' );
+		echo plugin()->scheme_stylesheet( 'colors' );
 		echo config_styles();
 		plugins_hook( 'color_scheme_vars' );
 		echo custom_css();
