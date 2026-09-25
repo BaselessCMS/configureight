@@ -21,7 +21,6 @@ use function CFE_Func\{
 use function CFE_Tags\{
 	load_font_files,
 	favicon_tag,
-	config_styles,
 	custom_css
 };
 
@@ -103,8 +102,9 @@ if ( plugin() ) {
 	if ( plugin() ) {
 		echo plugin()->scheme_stylesheet( 'fonts' );
 		echo plugin()->scheme_stylesheet( 'colors' );
-		echo config_styles();
-		plugins_hook( 'color_scheme_vars' );
+		plugins_hook( 'layout_props' );
+		plugins_hook( 'font_scheme_props' );
+		plugins_hook( 'color_scheme_props' );
 		echo custom_css();
 	}
 
