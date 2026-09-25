@@ -1,0 +1,65 @@
+///
+/// Color classes
+///
+
+@use 'sass:map';
+@use '../modules/colors' as c;
+
+.cfe-color {
+
+	@each $name, $color in c.$colors {
+		&.cfe-#{$name} {
+			color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-bg {
+			background-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-decoration {
+			text-decoration-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-emphasis {
+			text-emphasis-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-accent {
+			accent-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-caret {
+			caret-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-border {
+			border-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-outline {
+			outline-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-rule {
+			rule-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-column-rule {
+			column-rule-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-row-rule {
+			row-rule-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-fill {
+			fill: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-text-fill {
+			-webkit-text-fill-color: var( --cfe--#{$name} );
+					text-fill-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-stroke {
+			stroke: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-text-stroke {
+			-webkit-text-stroke-color: var( --cfe--#{$name} );
+					text-stroke-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-flood {
+			flood-color: var( --cfe--#{$name} );
+		}
+		&.cfe-#{$name}-stop {
+			stop-color: var( --cfe--#{$name} );
+		}
+	}
+}

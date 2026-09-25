@@ -12,10 +12,10 @@
 
 	// General colors.
 	@each $name, $color in c.$grayscale {
-		--cfe-color--#{$name}: #{$color};
+		--cfe--#{$name}: #{$color};
 	}
 	@each $name, $color in c.$colors {
-		--cfe-color--#{$name}: #{$color};
+		--cfe--#{$name}: #{$color};
 	}
 
 	// Color scheme.
