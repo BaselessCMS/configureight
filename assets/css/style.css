@@ -3066,6 +3066,9 @@ h3 + .search-form {
   flex-direction: var(--cfe-site-branding--flex-direction, row-reverse);
   justify-content: var(--cfe-site-branding--justify-content, flex-end);
 }
+.logo-after-text.main-nav-left .site-branding {
+  justify-content: var(--cfe-site-branding--justify-content, flex-start);
+}
 
 .logo-above-text .site-branding {
   flex-direction: var(--cfe-site-branding--logo-above--flex-direction, column);
