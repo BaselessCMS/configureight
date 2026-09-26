@@ -56,7 +56,11 @@ Many color schemes are provided, including dark versions for dark user preferenc
 
 Several font schemes are provided, which can be used by editing the configuration file.
 
-All font files have variable weights.
+Most font files have variable weights and all are stored locally.
+
+## Documentation
+
+The theme plugin offers several guide pages to help you in customizing your website.
 
 ## Credits
 
