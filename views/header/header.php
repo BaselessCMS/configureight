@@ -36,14 +36,24 @@ use function CFE_Tags\{
 // Header class.
 $header_class = 'site-header';
 if ( full_cover() ) {
-	$header_class = 'site-header full-cover-header';
+	$header_class .= ' full-cover-header';
+}
+
+// Header wrapper class.
+$header_wrap_class = 'site-header-wrap';
+if ( plugin() ) {
+	if ( 'vert' == plugin()->header_layout() ) {
+		$header_wrap_class .= ' header-vertical';
+	} else {
+		$header_wrap_class .= ' header-horizontal';
+	}
 }
 
 // Site title classes.
 $site_title_class = 'site-title';
 if ( plugin() ) {
 	if ( ! plugin()->site_title() ) {
-		$site_title_class = 'site-title screen-reader-text';
+		$site_title_class .= ' screen-reader-text';
 	}
 }
 
@@ -51,7 +61,7 @@ if ( plugin() ) {
 $site_desc_class = 'site-description';
 if ( plugin() ) {
 	if ( ! plugin()->site_slogan() ) {
-		$site_desc_class = 'site-description screen-reader-text';
+		$site_desc_class .= ' screen-reader-text';
 	}
 }
 
@@ -138,7 +148,7 @@ if ( plugin()->header_search() && getPlugin( 'Search_Forms' ) ) : ?>
 
 <header id="masthead" class="<?php echo $header_class; ?>" role="banner" data-site-header>
 
-	<div class="wrapper-general site-header-wrap">
+	<div class="wrapper-general <?php echo $header_wrap_class; ?>">
 
 		<div class="site-branding" itemscope="itemscope" itemtype="https://schema.org/Organization" data-site-branding>
 			<?php site_logo(); ?>

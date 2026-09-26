@@ -141,6 +141,13 @@
 	padding: var( --cfe-site-header-wrap--padding, calc( var( --cfe-spacing--y ) * .75 ) var( --cfe-spacing--x ) );
 	transition: all .25s;
 
+	&.header-vertical {
+		flex-direction: var( --cfe-site-header-wrap--flex-direction-tablet, column );
+		justify-content: var( --cfe-site-header-wrap--justify-content--tablet, center );
+		align-items: var( --cfe-site-header-wrap--align-items--tablet, center );
+		padding: var( --cfe-site-header-wrap--padding, calc( var( --cfe-spacing--y ) * 1.5 ) var( --cfe-spacing--x ) );
+	}
+
 	@media screen and ( max-width: 960px ) {
 		flex-direction: var( --cfe-site-header-wrap--flex-direction-tablet, column );
 		justify-content: var( --cfe-site-header-wrap--justify-content--tablet, center );
