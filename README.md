@@ -48,11 +48,11 @@ Templates (slugs) include…
 - About page (about)
 - Contact page (contact)
 
-### Color Schemes
+## Color Schemes
 
 Many color schemes are provided, including dark versions for dark user preference, and custom scheme options that use popular color palettes such as those from Tailwind, Bootstrap, Adobe, Material Design, etc.
 
-### Typography
+## Typography
 
 Several font schemes are provided, which can be used by editing the configuration file.
 
