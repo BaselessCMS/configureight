@@ -2,9 +2,9 @@
 
 A theme for Bludit CMS with many configurable options.
 
-![Tested up to Bludit version 3.22.0](https://img.shields.io/badge/Bludit-3.16.2-e6522c.svg?style=flat-square "Tested up to Bludit version 3.22.0")
+![Tested up to Bludit version 3.22.0](https://img.shields.io/badge/Bludit-3.22.0-e6522c.svg?style=flat-square "Tested up to Bludit version 3.22.0")
 ![Minimum PHP version is 7.4](https://img.shields.io/badge/PHP_Min-7.4-8892bf.svg?style=flat-square "Minimum PHP version is 7.4")
-![Tested on PHP version 8.3](https://img.shields.io/badge/PHP_Test-8.3-8892bf.svg?style=flat-square "Tested on PHP version 8.2.4")
+![Tested on PHP version 8.3](https://img.shields.io/badge/PHP_Test-8.3-8892bf.svg?style=flat-square "Tested on PHP version 8.3")
 ![jQuery ready](https://img.shields.io/badge/jQuery-Ready-0769ad.svg?style=flat-square "jQuery ready to use")
 ![SCSS stylesheets ready](https://img.shields.io/badge/SCSS-Ready-bf4080.svg?style=flat-square "SCSS stylesheets ready")
 ![CSS properties included](https://img.shields.io/badge/CSS-Properties-1769a5.svg?style=flat-square "CSS variables included")
