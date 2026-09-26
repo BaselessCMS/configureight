@@ -15,11 +15,11 @@ A theme for Bludit CMS with many configurable options.
 
 ## Overview
 
-The Configure 8 theme began under a different name as a starter theme, a boilerplate for developing themes for Bludit CMS. It still is is considered by its developer to be a starter theme however it now has many presentation options and the theme can be used for a simple yet attractive blog, or a small brochure site.
+The Configure 8 theme began under a different name as a starter theme, a boilerplate for developing themes for Bludit CMS. Because it has a simple, familiar look it still is considered by its developer to be a starter theme, and that is why the repository is offered as a template. However, it now has many presentation options and the theme has evolved into much more than its humble blog beginnings.
 
 ## Configuration
 
-This theme requires its companion plugin to be installed in order to access theme options. Find this at [https://github.com/Bludiot/configureight-plugin](https://github.com/Bludiot/configureight-plugin).
+This theme requires its companion plugin to be installed in order to access theme options. Find this at [https://github.com/BaselessCMS/configureight-plugin](https://github.com/BaselessCMS/configureight-plugin).
 
 ## Compatibility
 
@@ -50,7 +50,7 @@ Templates (slugs) include…
 
 ### Color Schemes
 
-Several color schemes are provided, including dark versions for dark user preference, which can be used by editing the configuration file.
+Many color schemes are provided, including dark versions for dark user preference, and custom scheme options that use popular color palettes such as those from Tailwind, Bootstrap, Adobe, Material Design, etc.
 
 ### Typography
 
