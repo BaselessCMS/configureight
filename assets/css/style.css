@@ -4389,14 +4389,15 @@ h3 + .search-form {
   width: var(--cfe-content-wrapper--width, 100%);
   max-width: var(--cfe-content-wrapper--max-width, 100%);
   height: var(--cfe-content-wrapper--height);
-  margin: var(--cfe-content-wrapper--margin, var(--cfe-spacing--y, 2rem) auto);
-  padding: var(--cfe-content-wrapper--padding, 0 var(--cfe-spacing--x, 2rem));
+  margin: var(--cfe-content-wrapper--margin, 0 auto);
+  padding: var(--cfe-content-wrapper--padding, 2rem var(--cfe-spacing--x, 2rem));
   display: var(--cfe-content-wrapper--display, flex);
   flex-direction: var(--cfe-content-wrapper--flex-direction, row);
   flex-wrap: var(--cfe-content-wrapper--flex-wrap, nowrap);
   align-items: var(--cfe-content-wrapper--align-items);
   justify-content: var(--cfe-content-wrapper--justify-content);
   gap: var(--cfe-content-wrapper--gap, var(--cfe-spacing--y, 2rem) var(--cfe-spacing--x, 2rem));
+  background-color: var(--cfe-content-wrapper--background-color, var(--cfe-body--bg-color));
 }
 @container page-wrap ( max-width: 960px ) {
   .content-wrapper {
@@ -5852,7 +5853,7 @@ div.page-gallery {
   max-height: var(--cfe-site-footer-text--max-height);
   min-height: var(--cfe-site-footer-text--min-height);
   margin: var(--cfe-site-footer--margin, 0);
-  padding: var(--cfe-site-footer--padding, var(--cfe-spacing--y, 2rem) var(--cfe-spacing--x, 2rem));
+  padding: var(--cfe-site-footer--padding, 0);
   font-family: var(--cfe-site-footer--font-family, inherit);
   font-size: var(--cfe-site-footer--font-size, inherit);
   font-weight: var(--cfe-site-footer--font-weight, inherit);
@@ -5861,7 +5862,7 @@ div.page-gallery {
   letter-spacing: var(--cfe-site-footer--letter-spacing, var(--cfe-letter-spacing, normal));
   word-spacing: var(--cfe-site-footer--word-spacing, var(--cfe-word-spacing, normal));
   line-height: var(--cfe-site-footer--line-height, var(--cfe-line-height));
-  background-color: var(--cfe-site-footer--bg-color, inherit);
+  background-color: var(--cfe-site-footer--bg-color, transparent);
   color: var(--cfe-site-footer--text-color, inherit);
 }
 @media (prefers-color-scheme: dark) {
@@ -5869,6 +5870,13 @@ div.page-gallery {
     background-color: var(--cfe-site-footer--bg-color--dark, inherit);
     color: var(--cfe-site-footer--text-color--dark, inherit);
   }
+}
+.site-footer .site-footer-wrap {
+  container-type: inline-size;
+  container-name: page-wrap;
+  max-width: var(--cfe-site-footer-wrap--max-width, var(--cfe-wrapper--page--max-width, 100%));
+  padding: var(--cfe-site-footer-wrap--padding, var(--cfe-spacing--y, 2rem) var(--cfe-spacing--x, 2rem));
+  background-color: var(--cfe-site-footer-wrap--bg-color, var(--cfe-body--bg-color));
 }
 .site-footer .site-footer-text {
   width: var(--cfe-site-footer-text--width, 100%);

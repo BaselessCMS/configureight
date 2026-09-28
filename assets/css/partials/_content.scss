@@ -7,14 +7,15 @@
 	width: var( --cfe-content-wrapper--width, 100% );
 	max-width: var( --cfe-content-wrapper--max-width, 100% );
 	height: var( --cfe-content-wrapper--height );
-	margin: var( --cfe-content-wrapper--margin, var( --cfe-spacing--y, 2rem ) auto );
-	padding: var( --cfe-content-wrapper--padding, 0 var( --cfe-spacing--x, 2rem ) );
+	margin: var( --cfe-content-wrapper--margin, 0 auto );
+	padding: var( --cfe-content-wrapper--padding, 2rem var( --cfe-spacing--x, 2rem ) );
 	display: var( --cfe-content-wrapper--display, flex );
 	flex-direction: var( --cfe-content-wrapper--flex-direction, row );
 	flex-wrap: var( --cfe-content-wrapper--flex-wrap, nowrap );
 	align-items: var( --cfe-content-wrapper--align-items );
 	justify-content: var( --cfe-content-wrapper--justify-content );
 	gap: var( --cfe-content-wrapper--gap, var( --cfe-spacing--y, 2rem ) var( --cfe-spacing--x, 2rem ) );
+	background-color: var( --cfe-content-wrapper--background-color, var( --cfe-body--bg-color ) );
 
 	@container page-wrap ( max-width: 960px ) {
 		flex-direction: column;
