@@ -103,6 +103,7 @@ if ( plugin() ) {
 		echo plugin()->scheme_stylesheet( 'fonts' );
 		echo plugin()->scheme_stylesheet( 'colors' );
 		plugins_hook( 'layout_props' );
+		plugins_hook( 'background_props' );
 		plugins_hook( 'font_scheme_props' );
 		plugins_hook( 'color_scheme_props' );
 		echo custom_css();
