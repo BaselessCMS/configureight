@@ -24,7 +24,7 @@
 	word-spacing: var( --cfe-sidebar--word-spacing, inherit );
 	text-decoration: var( --cfe-sidebar--text-decoration, inherit );
 	text-transform: var( --cfe-sidebar--text-transform, inherit );
-	background-color: var( --cfe-sidebar--bg-color, var( --cfe-sidebar--bg-color, inherit ) );
+	background-color: var( --cfe-sidebar--bg-color, transparent );
 	color: var( --cfe-sidebar--text-color, var( --cfe-sidebar--text-color, inherit ) );
 
 	@media ( prefers-color-scheme: dark ) {

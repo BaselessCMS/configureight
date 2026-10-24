@@ -49,11 +49,9 @@
 		letter-spacing: var( --cfe-site-footer-text--letter-spacing, var( --cfe-letter-spacing, normal ) );
 		word-spacing: var( --cfe-site-footer-text--word-spacing, var( --cfe-word-spacing, normal ) );
 		line-height: var( --cfe-site-footer-text--line-height, var( --cfe-line-height ) );
-		background-color: var( --cfe-site-footer-text--bg-color, inherit );
 		color: var( --cfe-site-footer-text--text-color, inherit );
 
 		@media ( prefers-color-scheme: dark ) {
-			background-color: var( --cfe-site-footer-text--bg-color--dark, inherit );
 			color: var( --cfe-site-footer-text--text-color--dark, inherit );
 		}
 	}

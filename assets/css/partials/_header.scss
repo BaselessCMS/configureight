@@ -9,10 +9,10 @@
 .site-header {
 	position: relative;
 	z-index: 500;
-	background-color: var( --cfe-site-header--bg-color, var( --cfe-body--bg-color ) );
+	background-color: var( --cfe-site-header--bg-color );
 
 	@media ( prefers-color-scheme: dark ) {
-		background-color: var( --cfe-site-header--bg-color--dark, var( --cfe-body--bg-color--dark ) );
+		background-color: var( --cfe-site-header--bg-color--dark );
 	}
 
 	&.full-cover-header {
@@ -129,10 +129,12 @@
 }
 
 .site-header-wrap {
+	container-type: inline-size;
+	container-name: page-wrap;
 	position: relative;
 	z-index: 150;
 	width: 100%;
-	max-width: 100%;
+	max-width: var( --cfe-site-header-wrap--max-width, 100% );
 	display: var( --cfe-site-header-wrap--display, flex );
 	flex-direction: var( --cfe-site-header-wrap--flex-direction, row );
 	align-items: var( --cfe-site-header-wrap--align-items, center );
@@ -146,6 +148,10 @@
 		justify-content: var( --cfe-site-header-wrap--justify-content--tablet, center );
 		align-items: var( --cfe-site-header-wrap--align-items--tablet, center );
 		padding: var( --cfe-site-header-wrap--padding, calc( var( --cfe-spacing--y ) * 1.5 ) var( --cfe-spacing--x ) );
+	}
+
+	@container page-wrap ( max-width: 960px ) {
+		flex-direction: var( --cfe-site-header-wrap--flex-direction-tablet, column );
 	}
 
 	@media screen and ( max-width: 960px ) {

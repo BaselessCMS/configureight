@@ -2918,11 +2918,11 @@ h3 + .search-form {
 .site-header {
   position: relative;
   z-index: 500;
-  background-color: var(--cfe-site-header--bg-color, var(--cfe-body--bg-color));
+  background-color: var(--cfe-site-header--bg-color);
 }
 @media (prefers-color-scheme: dark) {
   .site-header {
-    background-color: var(--cfe-site-header--bg-color--dark, var(--cfe-body--bg-color--dark));
+    background-color: var(--cfe-site-header--bg-color--dark);
   }
 }
 .site-header.full-cover-header {
@@ -3024,10 +3024,12 @@ h3 + .search-form {
 }
 
 .site-header-wrap {
+  container-type: inline-size;
+  container-name: page-wrap;
   position: relative;
   z-index: 150;
   width: 100%;
-  max-width: 100%;
+  max-width: var(--cfe-site-header-wrap--max-width, 100%);
   display: var(--cfe-site-header-wrap--display, flex);
   flex-direction: var(--cfe-site-header-wrap--flex-direction, row);
   align-items: var(--cfe-site-header-wrap--align-items, center);
@@ -3041,6 +3043,11 @@ h3 + .search-form {
   justify-content: var(--cfe-site-header-wrap--justify-content--tablet, center);
   align-items: var(--cfe-site-header-wrap--align-items--tablet, center);
   padding: var(--cfe-site-header-wrap--padding, calc(var(--cfe-spacing--y) * 1.5) var(--cfe-spacing--x));
+}
+@container page-wrap ( max-width: 960px ) {
+  .site-header-wrap {
+    flex-direction: var(--cfe-site-header-wrap--flex-direction-tablet, column);
+  }
 }
 @media screen and (max-width: 960px) {
   .site-header-wrap {
@@ -5448,7 +5455,7 @@ div.page-gallery {
   -webkit-text-decoration: var(--cfe-sidebar--text-decoration, inherit);
           text-decoration: var(--cfe-sidebar--text-decoration, inherit);
   text-transform: var(--cfe-sidebar--text-transform, inherit);
-  background-color: var(--cfe-sidebar--bg-color, var(--cfe-sidebar--bg-color, inherit));
+  background-color: var(--cfe-sidebar--bg-color, transparent);
   color: var(--cfe-sidebar--text-color, var(--cfe-sidebar--text-color, inherit));
 }
 @media (prefers-color-scheme: dark) {
@@ -5892,12 +5899,10 @@ div.page-gallery {
   letter-spacing: var(--cfe-site-footer-text--letter-spacing, var(--cfe-letter-spacing, normal));
   word-spacing: var(--cfe-site-footer-text--word-spacing, var(--cfe-word-spacing, normal));
   line-height: var(--cfe-site-footer-text--line-height, var(--cfe-line-height));
-  background-color: var(--cfe-site-footer-text--bg-color, inherit);
   color: var(--cfe-site-footer-text--text-color, inherit);
 }
 @media (prefers-color-scheme: dark) {
   .site-footer .site-footer-text {
-    background-color: var(--cfe-site-footer-text--bg-color--dark, inherit);
     color: var(--cfe-site-footer-text--text-color--dark, inherit);
   }
 }
